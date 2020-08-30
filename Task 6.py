@@ -122,3 +122,12 @@ for i in range(m):
 print('\n2 new matrices:')
 print(matrix_a)
 print(matrix_b)
+
+matrix_ab_sum = []
+
+for i in range(m):
+    matrix_ab_sum.append([])
+    for j in range(n):
+        matrix_ab_sum[i].append(matrix_a[i][j] + matrix_b[i][j])
+
+print(f'\nThe matrix equal to the sum of matrix_a and matrix_b: {matrix_ab_sum}')
