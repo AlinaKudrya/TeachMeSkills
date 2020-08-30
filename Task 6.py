@@ -90,5 +90,12 @@ for i in range(m):
         index = i
     summ = 0
 
-print(f"Index of column with the minimum sum: {index} = {min_column_summ}")
+print(f"Index of column with the minimum sum: {index} = {min_column_summ}\n")
 
+print("Zeroing all elements above the main diagonal")
+for i in range(m):
+    for j in range(n):
+        if i == j:
+            for f in range(j+1,n):
+                matrix[i][f] = 0
+    print(matrix[i])
