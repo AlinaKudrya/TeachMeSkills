@@ -99,3 +99,11 @@ for i in range(m):
             for f in range(j+1,n):
                 matrix[i][f] = 0
     print(matrix[i])
+
+print("\nZeroing all elements below the main diagonal")
+for i in range(m):
+    for j in range(n):
+        if i == j:
+            for f in range(j):
+                matrix[i][f] = 0
+    print(matrix[i])
