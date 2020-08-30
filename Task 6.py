@@ -45,7 +45,7 @@ for i in range(m):
         index = i
     summ = 0
 
-print(f"Index of row with the maximum sum: {index}")
+print(f"Index of row with the maximum sum: {index} = {max_row_summ}")
 
 index = 0
 summ = 0
@@ -59,7 +59,7 @@ for i in range(m):
         index = i
     summ = 0
 
-print(f"Index of column with the maximum sum: {index}")
+print(f"Index of column with the maximum sum: {index} = {max_column_summ}")
 
 index = 0
 summ = 0
@@ -73,5 +73,22 @@ for i in range(m):
         index = i
     summ = 0
 
-print(f"Index of row with the minimum sum: {index}")
+print(f"Index of row with the minimum sum: {index} = {min_row_summ}")
+
+index = 0
+summ = 0
+min_column_summ = 0
+
+for i in range(m):
+    min_column_summ += matrix[i][0]
+
+for i in range(m):
+    for j in range(n):
+        summ += matrix[j][i]
+    if summ < min_column_summ:
+        min_column_summ = summ
+        index = i
+    summ = 0
+
+print(f"Index of column with the minimum sum: {index} = {min_column_summ}")
 
