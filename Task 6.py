@@ -125,9 +125,21 @@ print(matrix_b)
 
 matrix_ab_sum = []
 
+print(f'\nThe matrix equal to the sum of matrix_a and matrix_b:')
+
 for i in range(m):
     matrix_ab_sum.append([])
     for j in range(n):
         matrix_ab_sum[i].append(matrix_a[i][j] + matrix_b[i][j])
+    print(matrix_ab_sum[i])
 
-print(f'\nThe matrix equal to the sum of matrix_a and matrix_b: {matrix_ab_sum}')
+matrix_ab_diff = []
+
+print(f'\nThe matrix equal to the difference between matrix_a and matrix_b:')
+
+for i in range(m):
+    matrix_ab_diff.append([])
+    for j in range(n):
+        matrix_ab_diff[i].append(matrix_a[i][j] - matrix_b[i][j])
+    print(matrix_ab_diff[i])
+
