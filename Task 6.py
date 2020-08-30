@@ -32,3 +32,18 @@ for i in range(m):
         summ += matrix[i][j]
 
 print(f'Sum of elements: {summ}')
+
+index = 0
+max_row_summ = 0
+summ = 0
+
+for i in range(m):
+    for j in range(n):
+        summ += matrix[i][j]
+    if summ > max_row_summ:
+        max_row_summ = summ
+        index = i
+    summ = 0
+
+print(f"Index of row with the maximum sum: {index}")
+
