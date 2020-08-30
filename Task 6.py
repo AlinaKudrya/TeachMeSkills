@@ -47,3 +47,16 @@ for i in range(m):
 
 print(f"Index of row with the maximum sum: {index}")
 
+index = 0
+summ = 0
+max_column_summ = 0
+
+for i in range(m):
+    for j in range(n):
+        summ += matrix[j][i]
+    if summ > max_column_summ:
+        max_column_summ = summ
+        index = i
+    summ = 0
+
+print(f"Index of column with the maximum sum: {index}")
