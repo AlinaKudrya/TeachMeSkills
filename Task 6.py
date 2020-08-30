@@ -1,4 +1,5 @@
 import random
+
 matrix = []
 maximum = 0
 
@@ -107,3 +108,17 @@ for i in range(m):
             for f in range(j):
                 matrix[i][f] = 0
     print(matrix[i])
+
+matrix_a = []
+matrix_b = []
+
+for i in range(m):
+    matrix_a.append([])
+    matrix_b.append([])
+    for j in range(n):
+        matrix_a[i].append(random.randint(1, 10))
+        matrix_b[i].append(random.randint(1, 10))
+
+print('\n2 new matrices:')
+print(matrix_a)
+print(matrix_b)
