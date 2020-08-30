@@ -60,3 +60,18 @@ for i in range(m):
     summ = 0
 
 print(f"Index of column with the maximum sum: {index}")
+
+index = 0
+summ = 0
+min_row_summ = sum(matrix[0])
+
+for i in range(m):
+    for j in range(n):
+        summ += matrix[i][j]
+    if summ < min_row_summ:
+        min_row_summ = summ
+        index = i
+    summ = 0
+
+print(f"Index of row with the minimum sum: {index}")
+
