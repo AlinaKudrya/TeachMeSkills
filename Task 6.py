@@ -1,12 +1,18 @@
 import random
+matrix = []
+maximum = 0
 
 m = int(input())
 n = int(input())
-matrix = []
 
-for i in range(n):
+for i in range(m):
     matrix.append([])
-    for j in range(m):
-        matrix[i].append(random.randint(1, 15))
+    for j in range(n):
+        matrix[i].append(random.randint(1, 20))
     print(matrix[i])
 
+for i in range(m):
+    for j in range(n):
+        if matrix[i][j] > maximum:
+            maximum = matrix[i][j]
+print(maximum)
