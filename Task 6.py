@@ -120,8 +120,8 @@ for i in range(m):
         matrix_b[i].append(random.randint(1, 10))
 
 print('\n2 new matrices:')
-print(matrix_a)
-print(matrix_b)
+print(f'Matrix_a: {matrix_a}')
+print(f'Matrix b: {matrix_b}')
 
 matrix_ab_sum = []
 
@@ -143,3 +143,13 @@ for i in range(m):
         matrix_ab_diff[i].append(matrix_a[i][j] - matrix_b[i][j])
     print(matrix_ab_diff[i])
 
+matrix_a_mult_g = []
+g = int(input('\nMultiply matrix_a by: '))
+
+print(f'The matrix equal to the multiply matrix_a by {g}:')
+
+for i in range(m):
+    matrix_a_mult_g.append([])
+    for j in range(n):
+        matrix_a_mult_g[i].append(matrix_a[i][j] * g)
+    print(matrix_a_mult_g[i])
